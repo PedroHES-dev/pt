@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissão de Trabalho - Escavações</title>
+    <link rel="stylesheet" href="css/escavacoes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Permissão de Trabalho - Escavações</h1>
+        <form id="workPermitForm" action="php/send_email.php" method="post">
+            <div class="section">
+                <div class="form-group">
+                    <label for="equipamento">Equipamento:</label>
+                    <input type="text" id="equipamento" name="equipamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Área:</label>
+                    <input type="text" id="area" name="area" required>
+                </div>
+                <div class="form-group">
+                    <label for="localServico">Local do Serviço:</label>
+                    <input type="text" id="localServico" name="localServico" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataInicio">Data Início:</label>
+                    <input type="date" id="dataInicio" name="dataInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataFim">Data Fim:</label>
+                    <input type="date" id="dataFim" name="dataFim" required>
+                </div>
+            </div>
+
+            <label for="descricaoTrabalho">Descrição do Trabalho:</label>
+            <textarea id="descricaoTrabalho" name="descricaoTrabalho" required></textarea>
+            
+            <div class="form-group">
+                <label for="numeroPessoas">Número de Pessoas:</label>
+                <input type="number" id="numeroPessoas" name="numeroPessoas" required>
+            </div>
+
+            <h1>Tipos de Atividades a Serem Executadas</h1>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Içamentos com área parada de manutenção</label>
+                <label><input type="checkbox"> Içamentos com área em operação</label>
+                <label><input type="checkbox"> Içamentos em canteiros de obra</label>
+                <label><input type="checkbox"> Escavações Internas nos Galpões</label>
+                <label><input type="checkbox"> Escavações Externas aos galpões das áreas</label>
+                <label><input type="checkbox"> Perfuração de poços artesianos</label>
+                <label><input type="checkbox"> Serviços de bate estaca</label>
+                <label><input type="checkbox"> Outros Serviços</label>
+            </div>
+
+            <h1>Medidas Preventivas para Realização do Serviço</h1>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Usar capacete com jugular, protetor auricular e calçado de segurança</label>
+                <label><input type="checkbox"> Usar cinto de segurança tipo paraquedista com dois talabartes</label>
+                <label><input type="checkbox"> Usar óculos de segurança modelo Ampla Visão</label>
+                <label><input type="checkbox"> Usar Luvas</label>
+                <label><input type="checkbox"> Usar Avental</label>
+                <label><input type="checkbox"> Usar equipamento autônomo de respiração</label>
+                <label><input type="checkbox"> Usar proteção respiratória:</label>
+                <label><input type="checkbox"> Outros EPI's</label>
+                <label><input type="checkbox"> Checar se operadores de equipamentos estão habilitados</label>
+                <label><input type="checkbox"> Checar desenhos / plantas de instalações subterrâneas</label>
+                <label><input type="checkbox"> Avaliar com equipamentos de detecção de energia superficial</label>
+                <label><input type="checkbox"> Manter isolamento do Local de Trabalho</label>
+                <label><input type="checkbox"> Manter sinalização do Local de Trabalho</label>
+                <label><input type="checkbox"> Verificar bloqueio, etiquetagem e teste</label>
+                <label><input type="checkbox"> Instalar acesso adequado e seguro ao ambiente</label>
+                <label><input type="checkbox"> Instalar ventilação adequada do Local</label>
+                <label><input type="checkbox"> Instalar exaustão adequada do Local</label>
+                <label><input type="checkbox"> Manter extintor de Incêndio nas proximidades do local</label>
+                <label><input type="checkbox"> Instalar sistema complementar de iluminação</label>
+                <label><input type="checkbox"> Escoramento de escavações com profundidade do local superior a 2 metros c/ parecer da engenharia (anexar)</label>
+                <label><input type="checkbox"> Análise de projetos / desenhos verificando instalações subterrâneas c/ parecer da engenharia (anexar)</label>
+                <label><input type="checkbox"> Comunicação via rádio obrigatória para atividades de escavamentos</label>
+                <label><input type="checkbox"> Usar corda de segurança acoplada ao cinto</label>
+                <label><input type="checkbox"> Usar ferramenta antí-faísca</label>
+                <label><input type="checkbox"> Realizar reunião de segurança no início do turno</label>
+                <label><input type="checkbox"> Instalar tripé de resgate</label>
+                <label><input type="checkbox"> Instalar sistema com roldanas</label>
+                <label><input type="checkbox"> Manter maca de emergência presente no local</label>
+                <label><input type="checkbox"> Definir acondicionamento e destinação adequada de resíduos gerados no serviço</label>
+                <label><input type="checkbox"> Instalar sinalização luminosa para atividades noturnas</label>
+                <label><input type="checkbox"> Avaliar a possibilidade de líquido / gás no interior da escavação</label>
+                <label><input type="checkbox"> Outras medidas</label>
+            </div>
+
+            <h1>Análise Prevenção da Atividade</h1>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Presença de Inflamável</label>
+                <label><input type="checkbox"> Presença de Fumos Metálicos ou Poeiras</label>
+                <label><input type="checkbox"> Presença de Produtos Asfixiantes / Irritantes</label>
+                <label><input type="checkbox"> Presença de galeria de cabos elétricos no subsolo</label>
+                <label><input type="checkbox"> Presença de tubulação no subsolo</label>
+                <label><input type="checkbox"> Ambiente com temperaturas extremas</label>
+                <label><input type="checkbox"> Ambiente com risco de choque elétrico</label>
+                <label><input type="checkbox"> Ambiente com risco de choques mecânicos</label>
+                <label><input type="checkbox"> Ambiente com equipamentos pressurizados</label>
+                <label><input type="checkbox"> Ambiente com risco de queda no mesmo nível</label>
+                <label><input type="checkbox"> Ambiente com risco de vazamento</label>
+                <label><input type="checkbox"> Ambiente com risco de desmoronamento</label>
+                <label><input type="checkbox"> Ambiente pouco iluminado</label>
+                <label><input type="checkbox"> Ambiente com intensa movimentação de pontes rolantes</label>
+                <label><input type="checkbox"> Geração de Resíduos</label>
+                <label><input type="checkbox"> Outros Riscos</label>
+            </div>
+
+            <h1>Bloqueio de Energia</h1>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Energia Elétrica</label>
+                <label><input type="checkbox"> Pressão Hidráulica</label>
+                <label><input type="checkbox"> Pressão ar Comprimido</label>
+                <label><input type="checkbox"> Energia de Movimento</label>
+                <label><input type="checkbox"> Energia Térmica</label>
+                <label><input type="checkbox"> Produtos Químicos</label>
+                <label><input type="checkbox"> Energia Potencial</label>
+                <label><input type="checkbox"> Outros</label>
+            </div>
+
+            <h1>Termo de Responsabilidade e Autorização</h2>
+            <div class="responsibility">
+                <div class="form-group">
+                    <label for="responsavelNome">Nome do Responsável:</label>
+                    <input type="text" id="responsavelNome" name="responsavelNome" required>
+                </div>
+                <div class="form-group">
+                    <label for="responsavelAssinatura">Assinatura:</label>
+                    <input type="text" id="responsavelAssinatura" name="responsavelAssinatura" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataLiberacao">Data de Liberação:</label>
+                    <input type="date" id="dataLiberacao" name="dataLiberacao" required>
+                </div>
+                <div class="form-group">
+                    <label for="validade">Validade:</label>
+                    <input type="text" id="validade" name="validade" required>
+                </div>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissão de Trabalho a Quente</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PTQ - Permissão de Trabalho a Quente</h1>
+
+        <!-- Cabeçalho do formulário -->
+        <div class="form-header">
+            <div>
+                <label for="executante">Executante</label>
+                <input type="text" id="executante" name="executante">
+            </div>
+            <div>
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa">
+            </div>
+            <div>
+                <label for="data">Data de Emissão</label>
+                <input type="date" id="data" name="data">
+            </div>
+            <div>
+                <label for="validade">Validade</label>
+                <input type="date" id="validade" name="validade">
+            </div>
+        </div>
+
+        <!-- Descrição da Atividade -->
+        <h2>Descrição da Atividade</h2>
+        <textarea rows="4" cols="50"></textarea>
+
+        <!-- Corpo do formulário: Local, Riscos e Medidas de Controle -->
+        <div class="form-body">
+
+            <div class="checkbox-group">
+                <h3>Local da Atividade</h3>
+                <div>
+                    <input type="checkbox" id="local1">
+                    <label for="local1">Rodagem</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="local2">
+                    <label for="local2">Altura</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="local3">
+                    <label for="local3">Local Confinado</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="local4">
+                    <label for="local4">Escavações</label>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <h3>Riscos Biológicos</h3>
+                <div>
+                    <input type="checkbox" id="risco1">
+                    <label for="risco1">Gases</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="risco2">
+                    <label for="risco2">Radiações Ionizantes</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="risco3">
+                    <label for="risco3">Agentes Químicos</label>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <h3>Medidas de Controle</h3>
+                <div>
+                    <input type="checkbox" id="controle1">
+                    <label for="controle1">EPC</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="controle2">
+                    <label for="controle2">Proteção Respiratória</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="controle3">
+                    <label for="controle3">Treinamento NR 33</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ícones de Risco (apenas ilustrativos) -->
+        <div class="risk-icons">
+            <img src="imgs/icon1.jpg" alt="Icone de Risco 1">
+            <img src="imgs/icon1.jpg" alt="Icone de Risco 2">
+            <img src="imgs/icon1.jpg" alt="Icone de Risco 3">
+        </div>

@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-x: hidden; /* Evita scroll horizontal desnecessário */
+}
+
+.container {
+    max-width: 1600px; /* Aumenta a largura máxima do container */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Grid geral para formulário */
+.form-header, .form-body {
+    display: grid;
+    gap: 20px;
+}
+
+/* Layout em várias colunas para os campos principais */
+.form-header {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para cabeçalho */
+    margin-bottom: 20px;
+}
+
+.form-body {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para corpo */
+    margin-bottom: 20px;
+}
+
+/* Estilo dos inputs */
+input[type="text"], input[type="date"], input[type="time"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px; /* Aumentado para melhor legibilidade */
+}
+
+/* Input de texto para descrição de atividades */
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Organização dos checkboxes em linha */
+.checkbox-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que quebrem em novas linhas se necessário */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group h3 {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.checkbox-group div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px; /* Espaçamento horizontal entre os checkboxes */
+}
+
+.checkbox-group div input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ícones de risco (personalizado) */
+.risk-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.risk-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .form-header {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no cabeçalho para telas menores */
+    }
+
+    .form-body {
+        grid-template-columns: repeat(1, 1fr); /* Empilha as seções no corpo para telas menores */
+    }
+
+    .checkbox-grid {
+        flex-wrap: wrap; /* Continua a permitir quebra de linha, mas adapta ao tamanho da tela */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-header {
+        grid-template-columns: 1fr; /* Empilha todas as colunas no cabeçalho em telas pequenas */
+    }
+
+    .form-body {
+        grid-template-columns: 1fr; /* Empilha todas as colunas do corpo em telas pequenas */
+    }
+
+    .checkbox-grid {
+        flex-direction: column; /* Em telas muito pequenas, organiza os checkboxes verticalmente */
+    }
+}

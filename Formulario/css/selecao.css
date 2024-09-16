@@ -1,0 +1,75 @@
+/* Reset básico */
+body, h1, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Título */
+h1 {
+    color: #0044cc; /* Azul escuro */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo do select */
+select {
+    border: 2px solid #0044cc; /* Azul escuro */
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #ffffcc; /* Amarelo claro */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #0044cc; /* Azul escuro */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0033aa; /* Azul mais escuro */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    select, button {
+        font-size: 0.9rem;
+    }
+}

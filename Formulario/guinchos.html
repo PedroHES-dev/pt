@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentação com uso de guinchos e plataformas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Movimentação com Guinchos e Plataformas</h1>
+        <form>
+            <label for="descricaoTrabalho">Descrição da Tarefa:</label>
+            <textarea id="descricaoTrabalho" required></textarea><br>
+
+            <label for="dataHora">Data e Horário:</label>
+            <input type="datetime-local" id="dataHora" required><br>
+
+            <label for="responsaveis">Responsáveis:</label>
+            <input type="text" id="responsaveis" required><br>
+
+            <label for="localTrabalho">Local de Trabalho:</label>
+            <input type="text" id="localTrabalho" required><br>
+
+            <label for="riscos">Riscos Identificados:</label>
+            <textarea id="riscos" required></textarea><br>
+
+            <label for="medidasControle">Medidas de Controle:</label>
+            <textarea id="medidasControle" required></textarea><br>
+
+            <label for="procedimentosEmergencia">Procedimentos de Emergência:</label>
+            <textarea id="procedimentosEmergencia" required></textarea><br>
+
+            <label for="validade">Validade da Permissão:</label>
+            <input type="date" id="validade" required><br>
+
+            <button type="submit">Enviar Permissão</button>
+        </form>
+    </div>
+</body>
+</html>

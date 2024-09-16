@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Permissão de Trabalho</title>
+    <link rel="stylesheet" href="css/selecao.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Selecione o Tipo de Permissão de Trabalho</h1>
+        <select name="tipoTrabalho" id="tipoTrabalho" required style="width: 100%; padding: 10px; margin-bottom: 20px;">
+            <option value="">Selecione</option>
+            <option value="guinchos">Movimentação com uso de guinchos e plataformas</option>
+            <option value="manutencao">Manutenção civil</option>
+            <option value="gases">Gases, explosivos e/ou líquidos inflamáveis</option>
+            <option value="altura">Altura e/ou telhados, níveis elevados</option>
+            <option value="demolicao">Demolição e escavações</option>
+            <option value="eletricidade">Eletricidade</option>
+            <option value="trabalho_quente">Trabalho a quente</option>
+            <option value="local_confinado">Local confinado</option>
+            <option value="outro">Outro</option>
+        </select>
+        <button type="button" onclick="confirmarTrabalho()">Confirmar</button>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
